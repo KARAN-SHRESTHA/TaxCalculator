@@ -23,6 +23,8 @@
         android:layout_margin="20dp"
         android:layout_toEndOf="@id/tvSalary"
         android:id="@+id/etSalary"
+        android:maxLength="6"
+        android:inputType="number"
 
         />
 
