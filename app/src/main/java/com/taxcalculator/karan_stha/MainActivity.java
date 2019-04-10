@@ -35,21 +35,21 @@ public class MainActivity extends AppCompatActivity {
                 if (validate()) {
                     int Salary = Integer.parseInt(etSalary.getText().toString());
 
-                    Calculate c = new Calculate();
+                    Calculate c = new Calculate();      // initializing Calculate class
 
-                    if (Salary <= 200000)
+                    if (Salary <= 200000)       //if salary is less or equals to 2 lakh
                     {
-                        c.setSalary(Salary);
+                        c.setSalary(Salary);        //setting Salary Value in Calculate class
                         double Total = c.Two_lakh();
                         tvOut.setText("Your Yearly Tax is:  " + Total);
                     }
-                    else if (Salary <= 350000)
+                    else if (Salary <= 350000)      // if salary is less or equals to 3 and half lakh
                     {
                         c.setSalary(Salary);
                         double Total = c.Three_half_lakh();
                         tvOut.setText("Your Yearly Tax is:  " + Total);
                     }
-                    else if (Salary > 350000)
+                    else if (Salary > 350000)       // if salary is greater then 3 and half lakh
                     {
                         c.setSalary(Salary);
                         double Total = c.Above_three();
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
+    //Validation
     private boolean validate() {
         boolean flag = true;
         Pattern p = Pattern.compile("[-+]?[0-9]");
