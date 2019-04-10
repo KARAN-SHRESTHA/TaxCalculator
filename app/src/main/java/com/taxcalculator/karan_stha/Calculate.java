@@ -7,7 +7,7 @@ public class Calculate {
 
     public double Two_lakh()
     {
-        return (Salary*0.01)+Salary;
+        return (Salary*0.01)*12;
     }
 
     public double Three_half_lakh()
@@ -15,7 +15,8 @@ public class Calculate {
         double remain = Salary - 200000;
         double remain_tax = remain*0.15;
         double main = 200000*0.01;
-        double total = main + remain_tax + Salary;
+        //double total = main + remain_tax + Salary;
+        double total = (main + remain_tax) * 12;
         return total;
     }
 
@@ -26,7 +27,8 @@ public class Calculate {
         double main = 200000*0.01;
         double second_main = 150000*0.15;
         double remain_tax = remain_after*0.25;
-        double total = main + second_main + remain_tax + Salary;
+        //double total = main + second_main + remain_tax + Salary;
+        double total = (main + second_main + remain_tax) * 12;
         return total;
     }
 
