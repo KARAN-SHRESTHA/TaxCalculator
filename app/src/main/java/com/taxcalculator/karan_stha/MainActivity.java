@@ -35,9 +35,25 @@ public class MainActivity extends AppCompatActivity {
                 if (validate()) {
                     int Salary = Integer.parseInt(etSalary.getText().toString());
 
-                    if (Salary >=200000)
-                    {
+                    Calculate c = new Calculate();
 
+                    if (Salary <= 200000)
+                    {
+                        c.setSalary(Salary);
+                        double Total = c.Two_lakh();
+                        tvOut.setText("Your Yearly Tax is:  " + Total);
+                    }
+                    else if (Salary <= 350000)
+                    {
+                        c.setSalary(Salary);
+                        double Total = c.Three_half_lakh();
+                        tvOut.setText("Your Yearly Tax is:  " + Total);
+                    }
+                    else if (Salary > 350000)
+                    {
+                        c.setSalary(Salary);
+                        double Total = c.Above_three();
+                        tvOut.setText("Your Yearly Tax is:  " + Total);
                     }
 
                 }

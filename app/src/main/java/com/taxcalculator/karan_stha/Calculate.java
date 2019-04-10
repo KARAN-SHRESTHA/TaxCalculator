@@ -2,39 +2,39 @@ package com.taxcalculator.karan_stha;
 
 public class Calculate {
 
-    int Salary;
+    private double Salary;
 
 
-    public int Two_lakh()
+    public double Two_lakh()
     {
-        return (Salary*(1/100))+Salary;
+        return (Salary*0.01)+Salary;
     }
 
-    public int Three_half_lakh()
+    public double Three_half_lakh()
     {
-        int remain = Salary - 200000;
-        int remain_tax = (remain*(15/100));
-        int main = (200000*(1/100));
-        int total = main + remain + Salary;
+        double remain = Salary - 200000;
+        double remain_tax = remain*0.15;
+        double main = 200000*0.01;
+        double total = main + remain_tax + Salary;
         return total;
     }
 
-    public int Above_three()
+    public double Above_three()
     {
-        int remain = Salary - 200000;
-        int remain_after = remain - 150000;
-        int main = (200000*(1/100));
-        int second_main = (150000*(15/100));
-        int remain_tax = (remain_after*(25/100));
-        int total = main + second_main + remain_tax + Salary;
+        double remain = Salary - 200000;
+        double remain_after = remain - 150000;
+        double main = 200000*0.01;
+        double second_main = 150000*0.15;
+        double remain_tax = remain_after*0.25;
+        double total = main + second_main + remain_tax + Salary;
         return total;
     }
 
-    public int getSalary() {
+    public double getSalary() {
         return Salary;
     }
 
-    public void setSalary(int salary) {
+    public void setSalary(double salary) {
         Salary = salary;
     }
 }
